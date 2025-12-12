@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabdullahi Ibnu Mubaarak School</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M50 5 L85 20 V50 C85 75 50 95 50 95 C50 95 15 75 15 50 V20 L50 5 Z%22 fill=%22%2310b981%22 stroke=%22%23ffffff%22 stroke-width=%222%22/></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M50 5 L85 20 V50 C85 75 50 95 50 95 C50 95 15 75 15 50 V20 L50 5 Z%22 fil[...]">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -82,7 +82,7 @@
     
 </head>
 <body class="h-screen w-screen overflow-hidden">
-    <div id="login-view" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-100 bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop')] bg-cover bg-center">
+    <div id="login-view" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-100 bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop'[...]]
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
         <div class="glass-card p-8 w-full max-w-md relative z-10 fade-in transition-all duration-300">
             <div class="text-center mb-6">
@@ -111,10 +111,10 @@
 
             <form id="student-login-form" class="space-y-4" onsubmit="app.handleLogin(event, 'student')">
                 <div>
-                    <input type="text" name="username" placeholder="Username" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition" required>
+                    <input type="text" name="username" placeholder="Username" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition" re[...]
                 </div>
                 <div>
-                    <input type="password" name="password" placeholder="Password" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition" required>
+                    <input type="password" name="password" placeholder="Password" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition[...]
                 </div>
                 <div id="student-error" class="text-red-500 text-sm hidden flex items-center gap-2"><i data-feather="alert-circle" class="w-4 h-4"></i> Invalid credentials</div>
                 <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-lg transition shadow-lg shadow-emerald-500/30">
@@ -124,13 +124,34 @@
 
             <form id="student-register-form" class="space-y-4 hidden" onsubmit="app.handleRegister(event)">
                 <div>
-                    <input type="text" name="fullname" placeholder="Full Name" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition" required>
+                    <input type="text" name="fullname" placeholder="Full Name" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition" r[...]
+                </div>
+
+                <!-- MANDATORY GRADE FIELD ADDED -->
+                <div>
+                    <label class="sr-only" for="grade">Grade</label>
+                    <select name="grade" id="grade" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition">
+                        <option value="">-- Select Grade --</option>
+                        <option value="Grade 1">Grade 1</option>
+                        <option value="Grade 2">Grade 2</option>
+                        <option value="Grade 3">Grade 3</option>
+                        <option value="Grade 4">Grade 4</option>
+                        <option value="Grade 5">Grade 5</option>
+                        <option value="Grade 6">Grade 6</option>
+                        <option value="Grade 7">Grade 7</option>
+                        <option value="Grade 8">Grade 8</option>
+                        <option value="Grade 9">Grade 9</option>
+                        <option value="Grade 10">Grade 10</option>
+                        <option value="Grade 11">Grade 11</option>
+                        <option value="Grade 12">Grade 12</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="text" name="username" placeholder="Choose Username" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transit[...]
                 </div>
                 <div>
-                    <input type="text" name="username" placeholder="Choose Username" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition" required>
-                </div>
-                <div>
-                    <input type="password" name="password" placeholder="Choose Password" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none transition" required>
+                    <input type="password" name="password" placeholder="Choose Password" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none tra[...]
                 </div>
                 <div id="register-error" class="text-red-500 text-sm hidden"></div>
                 <button type="submit" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 rounded-lg transition shadow-lg">
@@ -206,7 +227,7 @@
         
         <div id="sidebar-overlay" onclick="app.toggleSidebar()" class="fixed inset-0 bg-slate-900/50 z-20 hidden md:hidden backdrop-blur-sm transition-opacity"></div>
 
-        <aside id="sidebar" class="glass-sidebar fixed inset-y-0 left-0 z-30 w-64 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 flex flex-col h-full shadow-xl">
+        <aside id="sidebar" class="glass-sidebar fixed inset-y-0 left-0 z-30 w-64 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 flex flex-col h-full shadow[...]
             <div class="p-6 flex items-center gap-3 border-b border-white/10">
                 <div class="w-10 h-10 shrink-0 filter drop-shadow-lg">
                     <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -643,11 +664,21 @@
             handleRegister(e) {
                 e.preventDefault();
                 const form = new FormData(e.target);
+                const selectedGrade = form.get('grade');
                 const user = {
                     fullname: form.get('fullname'),
+                    grade: selectedGrade,
                     username: form.get('username'),
                     password: form.get('password')
                 };
+
+                // Ensure grade is selected (additional guard even though select is required)
+                if(!selectedGrade) {
+                    const err = document.getElementById('register-error');
+                    err.textContent = 'Please select a grade.';
+                    err.classList.remove('hidden');
+                    return;
+                }
                   
                 const res = store.registerStudent(user);
                 if(res.success) {
@@ -749,7 +780,7 @@
 
                 const announcementList = posts.map(p => `
                     <div class="glass-card overflow-hidden group">  
-                        ${p.image ? `<div class="h-48 overflow-hidden"><img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/400x200/e2e8f0/1e293b?text=Image+Unavailable';"></div>` : ''}  
+                        ${p.image ? `<div class="h-48 overflow-hidden"><img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null[...]
                         <div class="p-6">  
                             <div class="flex items-center gap-2 text-xs font-bold text-slate-400 mb-2 uppercase tracking-wide">  
                                 <i data-feather="calendar" class="w-3 h-3"></i> ${p.date}  
@@ -806,7 +837,7 @@
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-slate-700 mb-1">Date</label>
-                                        <input type="date" name="date" value="${new Date().toISOString().split('T')[0]}" class="w-full px-4 py-2 rounded-lg border border-slate-300 outline-none" required>
+                                        <input type="date" name="date" value="${new Date().toISOString().split('T')[0]}" class="w-full px-4 py-2 rounded-lg border border-slate-300 outline-none" requir[...]
                                     </div>
                                     <button type="submit" class="w-full bg-emerald-500 text-white py-2 rounded-lg font-bold hover:bg-emerald-600 transition">Post Score</button>
                                 </form>
@@ -816,7 +847,7 @@
                                 <h3 class="text-xl font-bold mb-4 text-slate-800">Posted Scores</h3>
                                 <div class="overflow-y-auto max-h-[500px]">
                                     <table class="w-full text-left">
-                                        <thead><tr class="border-b text-slate-500 text-sm"><th class="p-3">Student</th><th class="p-3">Grade</th><th class="p-3">Subject</th><th class="p-3">Score</th><th class="p-3">Date</th></tr></thead>
+                                        <thead><tr class="border-b text-slate-500 text-sm"><th class="p-3">Student</th><th class="p-3">Grade</th><th class="p-3">Subject</th><th class="p-3">Score</th><[...]
                                         <tbody id="grade-list">
                                             ${this.renderGradeRows()}
                                         </tbody>
@@ -886,7 +917,7 @@
                   
                 const adminControls = role === 'admin' ? `  
                     <div class="mb-6 flex justify-end">  
-                        <button onclick="app.openPostModal()" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition shadow-lg shadow-emerald-500/30">  
+                        <button onclick="app.openPostModal()" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition shadow-lg shadow-e[...]
                             <i data-feather="plus-circle" class="w-5 h-5"></i> Create Announcement  
                         </button>  
                     </div>  
@@ -898,7 +929,7 @@
                         <div class="space-y-8">  
                             ${posts.length ? posts.map(p => `  
                                 <div class="glass-card overflow-hidden group">  
-                                    ${p.image ? `<div class="h-48 overflow-hidden"><img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/400x200/e2e8f0/1e293b?text=Image+Unavailable';"></div>` : ''}  
+                                    ${p.image ? `<div class="h-48 overflow-hidden"><img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.[...]
                                     <div class="p-6">  
                                         <div class="flex items-center gap-2 text-xs font-bold text-slate-400 mb-2 uppercase tracking-wide">  
                                             <i data-feather="calendar" class="w-3 h-3"></i> ${p.date}  
@@ -958,10 +989,10 @@
                 container.innerHTML = html;  
                 // Dummy data for chart creation (real app would fetch aggregated data)
                 const ctx1 = document.getElementById('revenueChart').getContext('2d');  
-                this.currentChart = new Chart(ctx1, { type: 'line', data: { labels: ['Jan','Feb','Mar','Apr','May'], datasets: [{ label: 'Fees', data: [1200,1900,3000,2500,2000], borderColor: '#10b981', backgroundColor: '#10b9811a', fill: true }] }, options: { responsive: true, maintainAspectRatio: false } });  
+                this.currentChart = new Chart(ctx1, { type: 'line', data: { labels: ['Jan','Feb','Mar','Apr','May'], datasets: [{ label: 'Fees', data: [1200,1900,3000,2500,2000], borderColor: '#10b981[...] 
                 const ctx2 = document.getElementById('statusChart').getContext('2d');  
                 const present = stats.todayAtt.filter(a => a.status === 'Present').length;  
-                this.currentPie = new Chart(ctx2, { type: 'doughnut', data: { labels: ['Present','Absent','Late'], datasets: [{ data: [present, stats.todayAtt.filter(a => a.status==='Absent').length, stats.todayAtt.filter(a => a.status==='Late').length], backgroundColor: ['#10b981','#ef4444','#f59e0b'], borderWidth:0 }] }, options: { responsive: true, maintainAspectRatio: false } });  
+                this.currentPie = new Chart(ctx2, { type: 'doughnut', data: { labels: ['Present','Absent','Late'], datasets: [{ data: [present, stats.todayAtt.filter(a => a.status==='Absent').length, [...] 
                 feather.replace();
             }  
 
@@ -977,15 +1008,15 @@
                     <div class="glass-card p-6 fade-in">  
                         <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">  
                             <div class="flex gap-4 w-full md:w-auto flex-1">  
-                                <div class="relative w-full md:w-64"><input type="text" id="search-student" placeholder="Search by ID or Name" class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 outline-none focus:border-emerald-500"><i data-feather="search" class="absolute left-3 top-2.5 w-4 h-4 text-slate-400"></i></div>  
+                                <div class="relative w-full md:w-64"><input type="text" id="search-student" placeholder="Search by ID or Name" class="w-full pl-10 pr-4 py-2 rounded-lg border border-sl[...] 
                                 <div class="relative w-full md:w-48">  
-                                    <select id="filter-grade" class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 outline-none focus:border-emerald-500 appearance-none bg-white cursor-pointer">${grades.map(g => `<option value="${g}" ${this.filters.students === g ? 'selected' : ''}>${g}</option>`).join('')}</select>  
+                                    <select id="filter-grade" class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 outline-none focus:border-emerald-500 appearance-none bg-white cursor-poi[...] 
                                     <i data-feather="filter" class="absolute left-3 top-2.5 w-4 h-4 text-slate-400"></i>  
                                 </div>  
                             </div>  
-                            <button onclick="app.openAddStudentModal()" class="bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2"><i data-feather="plus" class="w-4 h-4"></i> Add New Student</button>  
+                            <button onclick="app.openAddStudentModal()" class="bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2"><i data-feather="plus" class="w-4 h-4[...] 
                         </div>  
-                        <div class="overflow-x-auto"><table class="w-full text-left"><thead><tr class="border-b text-slate-500 text-sm"><th class="p-3">ID</th><th class="p-3">Photo</th><th class="p-3">Name</th><th class="p-3">Grade</th><th class="p-3">Parent</th><th class="p-3">Status</th><th class="p-3"></th></tr></thead><tbody id="student-table-body">${this.generateStudentRows(students)}</tbody></table></div>  
+                        <div class="overflow-x-auto"><table class="w-full text-left"><thead><tr class="border-b text-slate-500 text-sm"><th class="p-3">ID</th><th class="p-3">Photo</th><th class="p-3"[...] 
                     </div>`;  
                 document.getElementById('search-student').addEventListener('input', (e) => {  
                     const q = e.target.value.toLowerCase();  
@@ -994,284 +1025,11 @@
                     document.getElementById('student-table-body').innerHTML = this.generateStudentRows(filtered);  
                     feather.replace();  
                 });  
-                document.getElementById('filter-grade').addEventListener('change', (e) => { this.filters.students = e.target.value; document.getElementById('search-student').dispatchEvent(new Event('input')); });  
+                document.getElementById('filter-grade').addEventListener('change', (e) => { this.filters.students = e.target.value; document.getElementById('search-student').dispatchEvent(new Event('i[...] 
                 feather.replace();
             }  
             generateStudentRows(students) {  
-                if(students.length === 0) return '<tr><td colspan="7" class="p-4 text-center">No students found.</td></tr>';  
-                return students.map(s => `  
-                    <tr onclick="app.openStudentProfile('${s.id}')" class="border-b hover:bg-slate-50 cursor-pointer group/row">  
-                        <td class="p-3">#${s.id}</td>  
-                        <td class="p-3"><img src="${s.photo || 'https://ui-avatars.com/api/?name='+s.name}" class="w-8 h-8 rounded-full object-cover"></td>  
-                        <td class="p-3 font-medium">${s.name}</td>  
-                        <td class="p-3"><span class="bg-slate-200 px-2 py-1 rounded text-xs font-bold">${s.grade}</span></td>  
-                        <td class="p-3 text-sm">${s.parent}</td>  
-                        <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold ${s.status === 'Active' ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}">${s.status}</span></td>  
-                        <td class="p-3"><button onclick="event.stopPropagation(); app.deleteStudent('${s.id}')" class="text-slate-400 hover:text-red-500 opacity-0 group-hover/row:opacity-100"><i data-feather="trash-2" class="w-4 h-4"></i></button></td>  
-                    </tr>`).join('');  
-            }  
-
-            openAddStudentModal(studentData = null) {
-                const s = studentData || {};
-                const isEdit = !!studentData;
-                const grades = Array.from({length: 12}, (_, i) => `Grade ${i+1}`);
-
-                const html = `  
-                    <h2 class="text-2xl font-bold mb-4">${isEdit ? 'Edit Student Profile' : 'Add New Student'}</h2>  
-                    <form onsubmit="app.saveStudentDetails(event, '${s.id || 'new'}')" class="space-y-4">  
-                        <div class="text-center">  
-                            <div class="w-24 h-24 mx-auto bg-slate-100 rounded-full mb-2 overflow-hidden cursor-pointer border-2 border-slate-200 hover:border-emerald-500 transition" onclick="document.getElementById('p-in').click()">  
-                                <img id="p-prev" src="${s.photo || 'https://ui-avatars.com/api/?name=' + (s.name || 'N')}" class="w-full h-full object-cover">  
-                            </div>  
-                            <input type="file" id="p-in" name="photo" class="hidden" accept="image/*" onchange="app.previewPhoto(this)">  
-                            <p class="text-xs text-blue-500 cursor-pointer" onclick="document.getElementById('p-in').click()">Upload/Change Photo</p>  
-                        </div>  
-
-                        <input name="name" placeholder="Full Name" value="${s.name || ''}" class="w-full p-2 border rounded" required>
-                        
-                        <select name="grade" class="w-full p-2 border rounded" required>
-                            <option value="">-- Select Grade --</option>
-                            ${grades.map(g => `<option value="${g}" ${s.grade === g ? 'selected' : ''}>${g}</option>`).join('')}
-                        </select>
-                        
-                        <input name="parent" placeholder="Parent/Guardian Name" value="${s.parent || ''}" class="w-full p-2 border rounded" required>
-                        <input name="phone" type="tel" placeholder="Parent Phone Number" value="${s.phone || ''}" class="w-full p-2 border rounded" required>
-                        
-                        <label class="block text-sm font-medium text-slate-700">Monthly Fee ($)</label>
-                        <input type="number" name="monthlyFee" placeholder="Monthly Fee Amount" value="${s.monthlyFee || 50}" class="w-full p-2 border rounded" required min="0">  
-
-                        <select name="status" class="w-full p-2 border rounded" required>  
-                            <option value="Active" ${s.status === 'Active' ? 'selected' : ''}>Active</option>  
-                            <option value="Inactive" ${s.status === 'Inactive' ? 'selected' : ''}>Inactive</option>  
-                        </select>  
-
-                        <div class="flex justify-end gap-2 pt-4">  
-                            <button type="button" onclick="app.closeModal()" class="px-4 py-2 border rounded-lg text-slate-700">Cancel</button>  
-                            <button type="submit" class="bg-emerald-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-emerald-600">${isEdit ? 'Save Changes' : 'Add Student'}</button>  
-                        </div>  
-                    </form>`;  
-                document.getElementById('modal-content').innerHTML = html;  
-                document.getElementById('student-modal').classList.remove('hidden');
-                feather.replace();
-            }
-            
-            previewPhoto(i) { 
-                if(i.files[0]) { 
-                    const r = new FileReader(); 
-                    r.onload=e=>document.getElementById('p-prev').src=e.target.result; 
-                    r.readAsDataURL(i.files[0]); 
-                } 
-            } 
-            
-            saveStudentDetails(e, id) {  
-                e.preventDefault();  
-                const f = new FormData(e.target);  
-                const fileInput = document.getElementById('p-in');  
-                const currentStudent = id !== 'new' ? store.getStudent(id) : {};
-            
-                const save = (photoBase64) => {  
-                    const data = {  
-                        name: f.get('name'),
-                        grade: f.get('grade'),
-                        parent: f.get('parent'),
-                        phone: f.get('phone'), 
-                        monthlyFee: parseFloat(f.get('monthlyFee')), 
-                        status: f.get('status'),
-                        photo: photoBase64 || currentStudent.photo || null // Keep existing photo if new one isn't uploaded
-                    };  
-
-                    if (id === 'new') {
-                        // Logic for New Student
-                        const newStudent = { ...data, id: 'ST' + Date.now().toString().slice(-4), enrolled: new Date().toISOString().split('T')[0] };
-                        store.addStudent(newStudent);
-                        this.showToast(`New student ${newStudent.name} added with ID #${newStudent.id}`, 'success');
-                    } else {
-                        // Logic for Editing Student
-                        store.updateStudent(id, data);
-                        this.showToast(`Student #${id} updated successfully.`, 'success');
-                    }
-
-                    this.closeModal();  
-                    this.navigate('students');  
-                };  
-            
-                if (fileInput.files && fileInput.files[0]) {  
-                    const reader = new FileReader();  
-                    reader.onload = (ev) => save(ev.target.result);  
-                    reader.readAsDataURL(fileInput.files[0]);  
-                } else {  
-                    save(null); // Save without photo update
-                }
-            }
-
-            openStudentProfile(id) { 
-                const s = store.getStudent(id); 
-                if(!s) { this.showToast('Student not found.', 'error'); return; } 
-                
-                const att = store.db.attendance.filter(a=>a.studentId===id);  
-                const rate = att.length ? Math.round((att.filter(a=>a.status==='Present').length/att.length)*100) : 0;  
-                
-                let cal = '<div class="grid grid-cols-10 gap-1">';  
-                for(let i=29;i>=0;i--) { const d=new Date(); d.setDate(new Date().getDate()-i); const ds=d.toISOString().split('T')[0]; const r=att.find(a=>a.date===ds); cal+=`<div class="h-6 rounded ${r? (r.status==='Present'?'bg-emerald-500':r.status==='Absent'?'bg-red-500':'bg-amber-500'):'bg-slate-200'}" title="${ds} - ${r ? r.status : 'N/A'}"></div>`; }  
-                cal+='</div>';  
-                
-                const html=`  
-                    <div class="flex items-center gap-4 mb-4"><img src="${s.photo||'https://ui-avatars.com/api/?name='+s.name}" class="w-16 h-16 rounded-full border-2 border-emerald-500"><div><h2 class="text-xl font-bold">${s.name} (#${s.id})</h2><p class="text-slate-500">${s.grade}</p></div></div>  
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div class="bg-slate-50 p-3 rounded">
-                            <p class="text-sm font-semibold">Parent: ${s.parent}</p>
-                            <p class="text-sm font-semibold">Phone: ${s.phone}</p>
-                            <p class="text-sm font-semibold">Monthly Fee: $${s.monthlyFee}</p>
-                        </div>
-                        <div class="bg-slate-50 p-3 rounded text-center">
-                            <span class="text-3xl font-bold ${rate>=75?'text-emerald-500':'text-red-500'}">${rate}%</span><br>
-                            <p class="text-sm text-slate-500">Attendance Rate (30 Days)</p>
-                        </div>
-                    </div>  
-                    <div class="mb-4"><p class="text-xs font-bold uppercase mb-2">Attendance History (30 Days)</p>${cal}</div>  
-                    <div class="flex justify-between">
-                        <button onclick="app.deleteStudent('${s.id}')" class="text-red-500 hover:text-red-700 transition">Delete Student</button>
-                        <div class="flex gap-2">
-                            <button type="button" onclick="app.closeModal()" class="px-3 py-1 border rounded-lg text-slate-700">Close</button>
-                            <button onclick="app.editStudent('${s.id}')" class="bg-emerald-500 text-white px-3 py-1 rounded-lg hover:bg-emerald-600 transition">Edit Details</button>
-                        </div>
-                    </div>  
-                `;  
-                document.getElementById('modal-content').innerHTML=html; 
-                document.getElementById('student-modal').classList.remove('hidden');
-                feather.replace();
-            }  
-            
-            editStudent(id) { 
-                const s = store.getStudent(id); 
-                this.openAddStudentModal(s); // Reuse the add modal for editing
-            }  
-            
-            deleteStudent(id) { 
-                // Changed: Replaced confirm() with customConfirm()
-                this.customConfirm(`Are you sure you want to permanently delete student #${id} and all associated records (fees, attendance, grades)?`, () => {
-                    store.deleteStudent(id); 
-                    this.closeModal(); 
-                    this.navigate('students'); 
-                    this.showToast(`Student #${id} deleted successfully.`, 'error');
-                });
-            }  
-            
-            closeModal() { document.getElementById('student-modal').classList.add('hidden'); }  
-              
-            // ... renderAttendance and saveDailyAttendance are updated to use grade filter ...
-            renderAttendance(container) { 
-                const grades = ['All Grades', ...Array.from({length:12},(_,i)=>`Grade ${i+1}`)];  
-                container.innerHTML=`<div class="fade-in"><div class="flex justify-between mb-4"><h2 class="text-xl font-bold">Daily Attendance Recording</h2><select id="att-grade" class="p-2 border rounded">${grades.map(g=>`<option ${this.filters.attendance===g?'selected':''}>${g}</option>`).join('')}</select></div><div id="att-list"></div></div>`;  
-                
-                const render=()=>{  
-                    const g=document.getElementById('att-grade').value; 
-                    this.filters.attendance = g; // Update filter state
-                    const all=store.getStudents(); 
-                    const list=g==='All Grades'?all:all.filter(s=>s.grade===g);  
-                    
-                    if(!list.length) { document.getElementById('att-list').innerHTML='<p class="p-4 text-center glass-card">No students found in this grade.</p>'; return; } 
-                    
-                    const today=new Date().toISOString().split('T')[0];  
-                    document.getElementById('att-list').innerHTML=`
-                        <div class="glass-card p-4">
-                            <h3 class="font-bold mb-2">Attendance for: ${g} (${today})</h3>
-                            <div class="max-h-96 overflow-y-auto">
-                                <table class="w-full">  
-                                ${list.map(s=>{ 
-                                    const st=store.getAttendance(today).find(a=>a.studentId===s.id)?.status||'Present'; 
-                                    return `<tr>
-                                        <td class="p-2">${s.name} <span class="text-xs text-slate-400">#${s.id}</span></td>
-                                        <td>  
-                                            <div class="flex gap-4">
-                                                <label><input type="radio" name="att_${s.id}" value="Present" ${st==='Present'?'checked':''}> Present</label>
-                                                <label><input type="radio" name="att_${s.id}" value="Absent" ${st==='Absent'?'checked':''}> Absent</label>
-                                                <label><input type="radio" name="att_${s.id}" value="Late" ${st==='Late'?'checked':''}> Late</label>
-                                            </div>
-                                        </td>
-                                    </tr>`; 
-                                }).join('')}  
-                                </table>
-                            </div>
-                            <button onclick="app.saveDailyAttendance()" class="mt-4 bg-emerald-500 text-white px-4 py-2 rounded w-full font-bold hover:bg-emerald-600 transition">Save Attendance</button>
-                        </div>`;  
-                };  
-                document.getElementById('att-grade').addEventListener('change',render);  
-                render();  
-            }  
-            
-            saveDailyAttendance() {  
-                const g=this.filters.attendance; 
-                const all=store.getStudents(); 
-                const list=g==='All Grades'?all:all.filter(s=>s.grade===g);  
-                const recs=[]; 
-                const today=new Date().toISOString().split('T')[0];  
-                
-                list.forEach(s=>{ 
-                    const radio=document.querySelector(`input[name="att_${s.id}"]:checked`);
-                    if(radio) {
-                        recs.push({studentId:s.id, date:today, status:radio.value});
-                    }
-                });  
-                
-                if (recs.length > 0) {
-                    store.saveAttendance(recs); 
-                    this.showToast('Attendance records saved successfully!', 'success');
-                } else {
-                    this.showToast('No attendance data selected to save.', 'info');
-                }
-            }  
-
-            // ... renderFees and toggleFee are updated to use grade filter ...
-            renderFees(container) { 
-                const grades = ['All Grades', ...Array.from({length:12},(_,i)=>`Grade ${i+1}`)];  
-                container.innerHTML=`<div class="fade-in"><div class="flex justify-between mb-4"><h2 class="text-xl font-bold">Fees & Financial Records</h2><select id="fee-grade" class="p-2 border rounded">${grades.map(g=>`<option ${this.filters.fees===g?'selected':''}>${g}</option>`).join('')}</select></div><div class="glass-card overflow-x-auto"><table class="w-full text-left"><thead><tr class="border-b text-slate-500 text-sm"><th class="p-3">ID</th><th class="p-3">Student Name</th><th class="p-3">Grade</th><th class="p-3">Month</th><th class="p-3">Amount</th><th class="p-3">Status</th><th class="p-3">Action</th></tr></thead><tbody id="fee-list"></tbody></table></div></div>`;  
-                
-                const render=()=>{  
-                    const g=document.getElementById('fee-grade').value;
-                    this.filters.fees = g; // Update filter state
-                    const fees=store.getFees().filter(f=>{ 
-                        if(g==='All Grades') return true; 
-                        const s=store.getStudent(f.studentId); 
-                        return s && s.grade===g; 
-                    }).sort((a, b) => a.studentName.localeCompare(b.studentName));
-                    
-                    document.getElementById('fee-list').innerHTML=fees.length ? fees.map(f=>{
-                        const student = store.getStudent(f.studentId);
-                        const studentGrade = student ? student.grade : 'N/A';
-
-                        return `  
-                            <tr class="border-b group hover:bg-slate-50">
-                                <td class="p-3 font-mono text-xs">#${f.id.split('-')[0]}</td>
-                                <td class="p-3 font-medium">${f.studentName}</td>
-                                <td class="p-3"><span class="bg-slate-200 px-2 py-1 rounded text-xs font-bold">${studentGrade}</span></td>
-                                <td class="p-3">${f.month}</td>
-                                <td class="p-3 font-bold">$${f.amount}</td>  
-                                <td class="p-3"><span class="px-2 py-1 rounded text-xs font-bold ${f.status==='Paid'?'bg-emerald-100 text-emerald-700':'bg-red-100 text-red-700'}">${f.status}</span></td>  
-                                <td class="p-3"><button onclick="app.toggleFee('${f.id}')" class="border px-2 py-1 rounded text-xs hover:bg-slate-200 transition">Toggle Status</button></td>
-                            </tr>  
-                        `; 
-                    }).join('') : '<tr><td colspan="7" class="p-4 text-center">No fee records found for this grade.</td></tr>';  
-                };  
-                document.getElementById('fee-grade').addEventListener('change',render);  
-                render();  
-            }  
-            toggleFee(id) { 
-                store.toggleFee(id); 
-                // Re-render only the list to reflect change without full page navigation
-                this.renderFees(document.getElementById('content-area')); 
-                this.showToast('Fee status updated.', 'info');
-            }  
-        }  
-
-        const app = new App();
-        
-        // Initialize feather icons on load
-        document.addEventListener('DOMContentLoaded', () => {
-            feather.replace();
-        });
-    </script>
-
-</body>  
+[...]
+</script>
+</body>
 </html>
-
